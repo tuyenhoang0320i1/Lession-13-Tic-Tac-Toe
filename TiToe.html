@@ -49,8 +49,7 @@
 <!--<input type="radio" name="men">O-->
 <div id="main"></div>
 <script>
-    let maxRow;
-    let maxCol;
+
     let str;
     function drawBoardGame(rows, cols) {
 
@@ -74,7 +73,7 @@
         document.getElementById("main").innerHTML = drawBoardGame(maxRow, maxCol);
     }
 
-    let turn =1;
+    let turn = 1;
     function clickCell(cell,x,y) {
         if (cell.innerHTML === ''){
             if (turn === 1 ){
@@ -91,7 +90,7 @@
     }
 
     function getCell(x,y) {
-        let value = document.getElementById("cell-"+x+y).innerHTML;
+      let value = document.getElementById("cell-"+x+y).innerHTML;
         return value;
     }
     function checkWin(x,y) {
@@ -104,7 +103,7 @@
         let count = 1;
         let i = 1;
         let j = 1;
-        if(y+i < maxRow){
+        if(x+i < maxRow){
             while (getCell(x, y) === getCell(x, y + i)) {
                 count++;
                 i++;
@@ -163,13 +162,14 @@
 
     }
     function gameOver(count) {
-        if(count==5){
-            console.log("Win roi");
+        if(count == 5){
+            alert("Win roi");
         }
     }
 
     drawBoardGame();
     playgame();
+
 </script>
 </body>
 </html>
