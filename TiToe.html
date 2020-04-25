@@ -49,17 +49,18 @@
 <!--<input type="radio" name="men">O-->
 <div id="main"></div>
 <script>
-    let maxRow = 10;
-    let maxCol = 10;
+    let maxRow;
+    let maxCol;
     let str;
     function drawBoardGame(rows, cols) {
+
         str = "<table >";
         for (let i = 0; i < rows; i++) {
             str += "<tr>";
             for (let j = 0; j < cols; j++) {
                 str += "<td>";
                 str += `<button id ='cell-${i}${j}' onclick='clickCell(this,${i},${j});'></button>`;
-                str += "</td>"+i+""+j+"</td>";
+                str += "</td>"+"</td>";
             }
             str += "</tr>";
         }
